@@ -1,0 +1,189 @@
+\hypertarget{_terrain_8h}{\section{Terrain.\-h File Reference}
+\label{_terrain_8h}\index{Terrain.\-h@{Terrain.\-h}}
+}
+
+
+Module \hyperlink{struct_terrain}{Terrain}.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__case}{s\-\_\-case}
+\begin{DoxyCompactList}\small\item\em Structure \hyperlink{structs__case}{s\-\_\-case}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_terrain}{Terrain}
+\begin{DoxyCompactList}\small\item\em Structure \hyperlink{struct_terrain}{Terrain}. \hyperlink{struct_terrain}{Terrain} est une structure contenant des informations sur les dimensions du jeu et un tableau de \hyperlink{structs__case}{s\-\_\-case}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_terrain_8h_a95776f618d739ddab8022bc0c35e75c5}{init\-Terrain} (\hyperlink{struct_terrain}{Terrain} $\ast$T, const int x, const int y, const int id)
+\begin{DoxyCompactList}\small\item\em Fonction d'initialisation du terrain Initialise les champs dimx et dimy avec les dimensions du terrain puis alloue un tableau 2\-D de char. \end{DoxyCompactList}\item 
+void \hyperlink{_terrain_8h_a74c4eb9b0b626b0d41d46ac540e52d76}{libere\-Terrain} (\hyperlink{struct_terrain}{Terrain} $\ast$T)
+\begin{DoxyCompactList}\small\item\em Fonction qui libère la mémoire allouée sur le tableau 2\-D. \end{DoxyCompactList}\item 
+int \hyperlink{_terrain_8h_abb510c9280c09813ec05b735411d0a24}{getdimx} (const \hyperlink{struct_terrain}{Terrain} $\ast$T)
+\begin{DoxyCompactList}\small\item\em Accesseur. Renvoie la dimension en x du terrain T. \end{DoxyCompactList}\item 
+int \hyperlink{_terrain_8h_af2f4f944ad39aaca4abf8d73a50b0102}{getdimy} (const \hyperlink{struct_terrain}{Terrain} $\ast$T)
+\begin{DoxyCompactList}\small\item\em Accesseur. Renvoie la dimension en y du terrain T. \end{DoxyCompactList}\item 
+void \hyperlink{_terrain_8h_a4eadd1c669ffce0de5c902c089a46f5a}{coordonnees\-Valide} (const \hyperlink{struct_terrain}{Terrain} $\ast$T, const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Fonction vérifiant que les coordonnées (x,y) sont valides dans le terrain T à travers des assert. \end{DoxyCompactList}\item 
+char \hyperlink{_terrain_8h_a8a2d37f0a5d6ae93be378acf9605707b}{ter\-Get\-X\-Y} (const \hyperlink{struct_terrain}{Terrain} $\ast$T, const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Fonction vérifiant la validité des coordonnées x et y puis renvoie le caractère stocké dans le tableau aux coordonnées (x,y). \end{DoxyCompactList}\item 
+void \hyperlink{_terrain_8h_a88c81a0c138f7d18e31579a79821bcef}{ter\-Set\-X\-Y} (\hyperlink{struct_terrain}{Terrain} $\ast$T, const int x, const int y, const \hyperlink{structs__case}{s\-\_\-case} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Mutateur du terrain aux coordonnées (x,y). Modifie le contenu du terrain au point de coordonnées (x,y) par un \hyperlink{structs__case}{s\-\_\-case} c. \end{DoxyCompactList}\item 
+int \hyperlink{_terrain_8h_adde7a42b6ea0d55d34e2fb34a438bc6c}{ter\-Position\-Valide} (const \hyperlink{struct_terrain}{Terrain} $\ast$T, const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Fonction vérifiant que le terrain aux coordonnées (x,y) est libre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module \hyperlink{struct_terrain}{Terrain}. 
+
+\subsection{Function Documentation}
+\hypertarget{_terrain_8h_a4eadd1c669ffce0de5c902c089a46f5a}{\index{Terrain.\-h@{Terrain.\-h}!coordonnees\-Valide@{coordonnees\-Valide}}
+\index{coordonnees\-Valide@{coordonnees\-Valide}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{coordonnees\-Valide}]{\setlength{\rightskip}{0pt plus 5cm}void coordonnees\-Valide (
+\begin{DoxyParamCaption}
+\item[{const {\bf Terrain} $\ast$}]{T, }
+\item[{const int}]{x, }
+\item[{const int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_a4eadd1c669ffce0de5c902c089a46f5a}
+
+
+Fonction vérifiant que les coordonnées (x,y) sont valides dans le terrain T à travers des assert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain, x et y les coordonnées dont on doit vérifier la validité. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_terrain_8h_abb510c9280c09813ec05b735411d0a24}{\index{Terrain.\-h@{Terrain.\-h}!getdimx@{getdimx}}
+\index{getdimx@{getdimx}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{getdimx}]{\setlength{\rightskip}{0pt plus 5cm}int getdimx (
+\begin{DoxyParamCaption}
+\item[{const {\bf Terrain} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_abb510c9280c09813ec05b735411d0a24}
+
+
+Accesseur. Renvoie la dimension en x du terrain T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un entier correspondant à la largeur du terrain. 
+\end{DoxyReturn}
+\hypertarget{_terrain_8h_af2f4f944ad39aaca4abf8d73a50b0102}{\index{Terrain.\-h@{Terrain.\-h}!getdimy@{getdimy}}
+\index{getdimy@{getdimy}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{getdimy}]{\setlength{\rightskip}{0pt plus 5cm}int getdimy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Terrain} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_af2f4f944ad39aaca4abf8d73a50b0102}
+
+
+Accesseur. Renvoie la dimension en y du terrain T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un entier correspondant à la hauteur du terrain. 
+\end{DoxyReturn}
+\hypertarget{_terrain_8h_a95776f618d739ddab8022bc0c35e75c5}{\index{Terrain.\-h@{Terrain.\-h}!init\-Terrain@{init\-Terrain}}
+\index{init\-Terrain@{init\-Terrain}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{init\-Terrain}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Terrain (
+\begin{DoxyParamCaption}
+\item[{{\bf Terrain} $\ast$}]{T, }
+\item[{const int}]{x, }
+\item[{const int}]{y, }
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_a95776f618d739ddab8022bc0c35e75c5}
+
+
+Fonction d'initialisation du terrain Initialise les champs dimx et dimy avec les dimensions du terrain puis alloue un tableau 2\-D de char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur le terrain à initialiser,x et y les dimensions du terrain à initialiser, id un entier identifiant le terrain. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_terrain_8h_a74c4eb9b0b626b0d41d46ac540e52d76}{\index{Terrain.\-h@{Terrain.\-h}!libere\-Terrain@{libere\-Terrain}}
+\index{libere\-Terrain@{libere\-Terrain}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{libere\-Terrain}]{\setlength{\rightskip}{0pt plus 5cm}void libere\-Terrain (
+\begin{DoxyParamCaption}
+\item[{{\bf Terrain} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_a74c4eb9b0b626b0d41d46ac540e52d76}
+
+
+Fonction qui libère la mémoire allouée sur le tableau 2\-D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_terrain_8h_a8a2d37f0a5d6ae93be378acf9605707b}{\index{Terrain.\-h@{Terrain.\-h}!ter\-Get\-X\-Y@{ter\-Get\-X\-Y}}
+\index{ter\-Get\-X\-Y@{ter\-Get\-X\-Y}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{ter\-Get\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}char ter\-Get\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{const {\bf Terrain} $\ast$}]{T, }
+\item[{const int}]{x, }
+\item[{const int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_a8a2d37f0a5d6ae93be378acf9605707b}
+
+
+Fonction vérifiant la validité des coordonnées x et y puis renvoie le caractère stocké dans le tableau aux coordonnées (x,y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain, x et y les coordonnées du point dont on veut obtenir la valeur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un caractère 
+\end{DoxyReturn}
+\hypertarget{_terrain_8h_adde7a42b6ea0d55d34e2fb34a438bc6c}{\index{Terrain.\-h@{Terrain.\-h}!ter\-Position\-Valide@{ter\-Position\-Valide}}
+\index{ter\-Position\-Valide@{ter\-Position\-Valide}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{ter\-Position\-Valide}]{\setlength{\rightskip}{0pt plus 5cm}int ter\-Position\-Valide (
+\begin{DoxyParamCaption}
+\item[{const {\bf Terrain} $\ast$}]{T, }
+\item[{const int}]{x, }
+\item[{const int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_adde7a42b6ea0d55d34e2fb34a438bc6c}
+
+
+Fonction vérifiant que le terrain aux coordonnées (x,y) est libre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain, x et y les coordonnées du point dont on veut vérifier la validité. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_terrain_8h_a88c81a0c138f7d18e31579a79821bcef}{\index{Terrain.\-h@{Terrain.\-h}!ter\-Set\-X\-Y@{ter\-Set\-X\-Y}}
+\index{ter\-Set\-X\-Y@{ter\-Set\-X\-Y}!Terrain.h@{Terrain.\-h}}
+\subsubsection[{ter\-Set\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void ter\-Set\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Terrain} $\ast$}]{T, }
+\item[{const int}]{x, }
+\item[{const int}]{y, }
+\item[{const {\bf s\-\_\-case} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{_terrain_8h_a88c81a0c138f7d18e31579a79821bcef}
+
+
+Mutateur du terrain aux coordonnées (x,y). Modifie le contenu du terrain au point de coordonnées (x,y) par un \hyperlink{structs__case}{s\-\_\-case} c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_terrain}{Terrain}} & $\ast$ T un pointeur sur terrain, x et y les coordonnées du point dont on veut modifier le contenu. \\
+\hline
+\end{DoxyParams}

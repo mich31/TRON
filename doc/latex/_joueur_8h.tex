@@ -1,0 +1,79 @@
+\hypertarget{_joueur_8h}{\section{Joueur.\-h File Reference}
+\label{_joueur_8h}\index{Joueur.\-h@{Joueur.\-h}}
+}
+
+
+Module \hyperlink{struct_joueur}{Joueur}.  
+
+
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Terrain.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_joueur}{Joueur}
+\begin{DoxyCompactList}\small\item\em Structure \hyperlink{struct_joueur}{Joueur}. \hyperlink{struct_joueur}{Joueur} est une structure contenant des informations sur les coordonnées du joueur, son identifiant, son niveau de turbo, la direction dans laquelle il se déplace et son score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_joueur_8h_a40a7e50eac3aa6eef41ac777f0402cfe}{void {\bfseries set\-Direction} (\hyperlink{struct_joueur}{Joueur} $\ast$J, const char direction)}\label{_joueur_8h_a40a7e50eac3aa6eef41ac777f0402cfe}
+
+\item 
+\hypertarget{_joueur_8h_a07078dda1a7c32c8f8f34976d690222a}{void {\bfseries init\-Pos} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int id, const \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a07078dda1a7c32c8f8f34976d690222a}
+
+\item 
+\hypertarget{_joueur_8h_a182ed8d2e839cf816ef4ec45a8b9039f}{int {\bfseries get\-Posx} (const \hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_a182ed8d2e839cf816ef4ec45a8b9039f}
+
+\item 
+\hypertarget{_joueur_8h_ac295604325317b832217f863ef0f7868}{void {\bfseries set\-Posx} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int x)}\label{_joueur_8h_ac295604325317b832217f863ef0f7868}
+
+\item 
+\hypertarget{_joueur_8h_a8bc91f6ee642b66154289f213d689251}{int {\bfseries get\-Posy} (const \hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_a8bc91f6ee642b66154289f213d689251}
+
+\item 
+\hypertarget{_joueur_8h_ac4f6f7a4f4a1fe5bf878448a71bed181}{void {\bfseries set\-Posy} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int y)}\label{_joueur_8h_ac4f6f7a4f4a1fe5bf878448a71bed181}
+
+\item 
+\hypertarget{_joueur_8h_a63cbb2383315c7ea9fede3112fa9246a}{int {\bfseries get\-Score} (const \hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_a63cbb2383315c7ea9fede3112fa9246a}
+
+\item 
+\hypertarget{_joueur_8h_acbb4cf0a6a793fc75376ffaf393be73e}{void {\bfseries set\-Score} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int score)}\label{_joueur_8h_acbb4cf0a6a793fc75376ffaf393be73e}
+
+\item 
+\hypertarget{_joueur_8h_a120586b15446f36c23ecfa2aadbd5d66}{void {\bfseries incr\-Score} (\hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_a120586b15446f36c23ecfa2aadbd5d66}
+
+\item 
+\hypertarget{_joueur_8h_aa97e931b8b6235941f47ed05aa6c0eab}{int {\bfseries get\-Ecr} (const \hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_aa97e931b8b6235941f47ed05aa6c0eab}
+
+\item 
+\hypertarget{_joueur_8h_ac5a2a15d486a63b47ecef8ab73db0708}{void {\bfseries set\-Ecr} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int ecr)}\label{_joueur_8h_ac5a2a15d486a63b47ecef8ab73db0708}
+
+\item 
+\hypertarget{_joueur_8h_ada42cf07e63e57f7e5b2c979e4605bb0}{int {\bfseries get\-Turbo} (const \hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_ada42cf07e63e57f7e5b2c979e4605bb0}
+
+\item 
+\hypertarget{_joueur_8h_a6b00d169294f697fc92f9230a5ba00ba}{void {\bfseries init\-Joueur} (\hyperlink{struct_joueur}{Joueur} $\ast$J, int id, const \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a6b00d169294f697fc92f9230a5ba00ba}
+
+\item 
+\hypertarget{_joueur_8h_acb121456f738b9d93e9fc250b950014c}{void {\bfseries libere\-Joueur} (\hyperlink{struct_joueur}{Joueur} $\ast$J)}\label{_joueur_8h_acb121456f738b9d93e9fc250b950014c}
+
+\item 
+\hypertarget{_joueur_8h_a1a9dd475085dbde440c2a09f14157fca}{void {\bfseries tron\-Gauche} (\hyperlink{struct_joueur}{Joueur} $\ast$J, \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a1a9dd475085dbde440c2a09f14157fca}
+
+\item 
+\hypertarget{_joueur_8h_a5b2faf7487b9b7611c8bb35d02567b01}{void {\bfseries tron\-Droite} (\hyperlink{struct_joueur}{Joueur} $\ast$J, \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a5b2faf7487b9b7611c8bb35d02567b01}
+
+\item 
+\hypertarget{_joueur_8h_a4b77ca0ceec742cf1b0b13b734a3f98a}{void {\bfseries tron\-Haut} (\hyperlink{struct_joueur}{Joueur} $\ast$J, \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a4b77ca0ceec742cf1b0b13b734a3f98a}
+
+\item 
+\hypertarget{_joueur_8h_a619a6d4d7312d72810fbdd466a5aa1e1}{void {\bfseries tron\-Bas} (\hyperlink{struct_joueur}{Joueur} $\ast$J, \hyperlink{struct_terrain}{Terrain} $\ast$T)}\label{_joueur_8h_a619a6d4d7312d72810fbdd466a5aa1e1}
+
+\item 
+\hypertarget{_joueur_8h_a3da254e01d4d216711d4609e2bac9dcc}{bool {\bfseries deplacement\-Possible} (const \hyperlink{struct_joueur}{Joueur} $\ast$J, const char touche)}\label{_joueur_8h_a3da254e01d4d216711d4609e2bac9dcc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module \hyperlink{struct_joueur}{Joueur}. 

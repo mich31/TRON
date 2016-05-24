@@ -1,0 +1,35 @@
+#ifndef _JOUEUR_H
+#define _JOUEUR_H
+
+#include <stdbool.h>
+#include "Terrain.h"
+
+typedef struct 
+{
+	int posx,posy;
+	int id,turbo;
+	int score;
+	char direction;
+	int ecr; /* 0 si le joueur se trouve dans position valide, 1 sinon; elle sert à savoir quand il s'ecrasse */
+} Joueur;
+
+void setDirection(Joueur * J, const char direction);/*fait*/
+void initPos(Joueur * J,int id,const Terrain * T);
+int getPosx(const Joueur * J);/*fait*/
+void setPosx(Joueur * J,int x);/*fait*/
+int getPosy(const Joueur * J);/*fait*/
+void setPosy(Joueur * J,int y);/*fait*/
+int getScore(const Joueur * J);/*fait*/
+void setScore(Joueur * J,int score);/*fait*/
+void incrScore(Joueur * J);
+int getEcr(const Joueur *J);
+void setEcr(Joueur * J, int ecr);
+void initJoueur(Joueur * J,int id,const Terrain * T); /*fait et à revoir*/
+void libereJoueur(Joueur * J);
+void tronGauche(Joueur * J,Terrain * T);/*fait*/
+void tronDroite(Joueur * J,Terrain * T);/*fait*/
+void tronHaut(Joueur * J,Terrain * T);/*fait*/
+void tronBas(Joueur * J,Terrain * T);/*fait*/
+bool deplacementPossible(const Joueur * J, const char touche);
+
+#endif

@@ -1,0 +1,41 @@
+#ifndef _JEU_H
+#define _JEU_H
+#include "Niveau.h"
+#include "Joueur.h"
+
+typedef struct
+{
+	
+	int nbJoueur;
+	Joueur * J;	
+	Niveau * N;
+} Jeu;
+
+
+void jeuInit(Jeu * JeuTron);/*initialise tout le jeu, qui est composé de plusieurs*/
+							/*parties*/
+
+void jeuInitPartie(Jeu * JeuTron);/*initialise seulement une partie
+									le terrain est initialisé,
+									ecrasement initialisé,
+									les positions des joueurs est initialisé
+									mais les scores restent pareil*/
+void jeuLibere(Jeu *JeuTron);
+
+Terrain * jeuGetTerrain(Jeu *JeuTron);
+
+void jeuSetJoueur(Jeu *JeuTron, int nb);
+
+Joueur * jeuGetJoueur(Jeu *JeuTron, const int id);
+
+const Terrain * jeuGetConstTerrain(const Jeu *JeuTron);
+
+const Joueur * jeuGetConstJoueur(const Jeu *JeuTron, const int id);
+
+Joueur * jeuTrouverGagnant(Jeu *JeuTron);
+
+void jeuSetNiveau(Jeu *JeuTron, int idNiveau);
+
+void jeuClavier(Jeu * JeuTron);
+
+#endif

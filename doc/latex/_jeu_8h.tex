@@ -1,0 +1,244 @@
+\hypertarget{_jeu_8h}{\section{Jeu.\-h File Reference}
+\label{_jeu_8h}\index{Jeu.\-h@{Jeu.\-h}}
+}
+
+
+Module \hyperlink{struct_jeu}{Jeu}.  
+
+
+{\ttfamily \#include \char`\"{}Niveau.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Joueur.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Constantes.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_jeu}{Jeu}
+\begin{DoxyCompactList}\small\item\em Structure \hyperlink{struct_jeu}{Jeu}. \hyperlink{struct_jeu}{Jeu} est une structure contenant des informations sur le nombre de joueur du jeu, un tableau de pointeur sur les joueurs et un pointeur sur \hyperlink{struct_niveau}{Niveau}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_jeu_8h_a6956926cbd44cf3703271156a75481f2}{jeu\-Init} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, int id\-Niveau)
+\begin{DoxyCompactList}\small\item\em procédure d'initialisation du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{_jeu_8h_abef13f17b8a9494b7894edd177607b69}{jeu\-Init\-Partie} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, int id\-Niveau)
+\begin{DoxyCompactList}\small\item\em procédure initialisant une partie, elle initialise le terrain,les positions initiales des joueurs tout en conservant le score. \end{DoxyCompactList}\item 
+void \hyperlink{_jeu_8h_a06e598c1e1e9feba9b05b79941f17264}{jeu\-Libere} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron)
+\begin{DoxyCompactList}\small\item\em procédure qui libère l'espace mémoire alloué pour le niveau et les joueurs. \end{DoxyCompactList}\item 
+\hyperlink{struct_terrain}{Terrain} $\ast$ \hyperlink{_jeu_8h_a0c72690cf1bd08631b1d260c5c0a7252}{jeu\-Get\-Terrain} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron)
+\begin{DoxyCompactList}\small\item\em Accesseur au terrain du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{_jeu_8h_a0f43a0fd6ddd2856e2d7ac1aeaf1f952}{jeu\-Set\-Joueur} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, int nb)
+\begin{DoxyCompactList}\small\item\em Mutateur du joueur. Procédure qui fait les allocations dynamiques et initialise un nombre nb de joueurs. \end{DoxyCompactList}\item 
+\hyperlink{struct_joueur}{Joueur} $\ast$ \hyperlink{_jeu_8h_a68b2f5e37b18175d2d6ad71d2831e1e8}{jeu\-Get\-Joueur} (const \hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, const int id)
+\begin{DoxyCompactList}\small\item\em Accesseur du joueur. \end{DoxyCompactList}\item 
+const \hyperlink{struct_terrain}{Terrain} $\ast$ \hyperlink{_jeu_8h_a45715ee5dbea54e1246bed7d5576b81b}{jeu\-Get\-Const\-Terrain} (const \hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron)
+\begin{DoxyCompactList}\small\item\em Accesseur du terrain. \end{DoxyCompactList}\item 
+const \hyperlink{struct_joueur}{Joueur} $\ast$ \hyperlink{_jeu_8h_a161332bc316fbe8d28e7ca037060b125}{jeu\-Get\-Const\-Joueur} (const \hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, const int id)
+\begin{DoxyCompactList}\small\item\em Accesseur du joueur. \end{DoxyCompactList}\item 
+\hyperlink{struct_joueur}{Joueur} $\ast$ \hyperlink{_jeu_8h_a430b5c38e53d825913da318533ed3c7c}{jeu\-Trouver\-Gagnant} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron)
+\begin{DoxyCompactList}\small\item\em Fonction qui détermine le gagnant d'une partie. \end{DoxyCompactList}\item 
+void \hyperlink{_jeu_8h_a390202646d38d32c0556f54b8ba9b095}{jeu\-Set\-Niveau} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron, int id\-Niveau)
+\begin{DoxyCompactList}\small\item\em Mutateur du niveau. Cette fonction initialise le niveau en fonction de l'identifiant id\-Niveau et en initialisant le terrain. \end{DoxyCompactList}\item 
+void \hyperlink{_jeu_8h_a8f4167e2ab18ecdf20509631208780ec}{jeu\-Clavier} (\hyperlink{struct_jeu}{Jeu} $\ast$Jeu\-Tron)
+\begin{DoxyCompactList}\small\item\em Fonction de gestion des déplacements des joueurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module \hyperlink{struct_jeu}{Jeu}. 
+
+\subsection{Function Documentation}
+\hypertarget{_jeu_8h_a8f4167e2ab18ecdf20509631208780ec}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Clavier@{jeu\-Clavier}}
+\index{jeu\-Clavier@{jeu\-Clavier}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Clavier}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Clavier (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a8f4167e2ab18ecdf20509631208780ec}
+
+
+Fonction de gestion des déplacements des joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu} \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_a161332bc316fbe8d28e7ca037060b125}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Get\-Const\-Joueur@{jeu\-Get\-Const\-Joueur}}
+\index{jeu\-Get\-Const\-Joueur@{jeu\-Get\-Const\-Joueur}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Get\-Const\-Joueur}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Joueur}$\ast$ jeu\-Get\-Const\-Joueur (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a161332bc316fbe8d28e7ca037060b125}
+
+
+Accesseur du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, id un entier identifiant le joueur auquel on veut accéder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur un joueur. 
+\end{DoxyReturn}
+\hypertarget{_jeu_8h_a45715ee5dbea54e1246bed7d5576b81b}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Get\-Const\-Terrain@{jeu\-Get\-Const\-Terrain}}
+\index{jeu\-Get\-Const\-Terrain@{jeu\-Get\-Const\-Terrain}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Get\-Const\-Terrain}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Terrain}$\ast$ jeu\-Get\-Const\-Terrain (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu} $\ast$}]{Jeu\-Tron}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a45715ee5dbea54e1246bed7d5576b81b}
+
+
+Accesseur du terrain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur le terrain. 
+\end{DoxyReturn}
+\hypertarget{_jeu_8h_a68b2f5e37b18175d2d6ad71d2831e1e8}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Get\-Joueur@{jeu\-Get\-Joueur}}
+\index{jeu\-Get\-Joueur@{jeu\-Get\-Joueur}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Get\-Joueur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Joueur}$\ast$ jeu\-Get\-Joueur (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a68b2f5e37b18175d2d6ad71d2831e1e8}
+
+
+Accesseur du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, id un entier identifiant le joueur auquel on veut accéder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur un joueur. 
+\end{DoxyReturn}
+\hypertarget{_jeu_8h_a0c72690cf1bd08631b1d260c5c0a7252}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Get\-Terrain@{jeu\-Get\-Terrain}}
+\index{jeu\-Get\-Terrain@{jeu\-Get\-Terrain}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Get\-Terrain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Terrain}$\ast$ jeu\-Get\-Terrain (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a0c72690cf1bd08631b1d260c5c0a7252}
+
+
+Accesseur au terrain du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur le terrain du jeu. 
+\end{DoxyReturn}
+\hypertarget{_jeu_8h_a6956926cbd44cf3703271156a75481f2}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Init@{jeu\-Init}}
+\index{jeu\-Init@{jeu\-Init}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{int}]{id\-Niveau}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a6956926cbd44cf3703271156a75481f2}
+
+
+procédure d'initialisation du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, id\-Niveau un entier identifiant le niveau de jeu auquel sera initialisé le jeu. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_abef13f17b8a9494b7894edd177607b69}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Init\-Partie@{jeu\-Init\-Partie}}
+\index{jeu\-Init\-Partie@{jeu\-Init\-Partie}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Init\-Partie}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Init\-Partie (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{int}]{id\-Niveau}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_abef13f17b8a9494b7894edd177607b69}
+
+
+procédure initialisant une partie, elle initialise le terrain,les positions initiales des joueurs tout en conservant le score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, id\-Niveau un entier identifiant le niveau de jeu auquel sera initialisé le jeu. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_a06e598c1e1e9feba9b05b79941f17264}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Libere@{jeu\-Libere}}
+\index{jeu\-Libere@{jeu\-Libere}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Libere}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Libere (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a06e598c1e1e9feba9b05b79941f17264}
+
+
+procédure qui libère l'espace mémoire alloué pour le niveau et les joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_a0f43a0fd6ddd2856e2d7ac1aeaf1f952}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Set\-Joueur@{jeu\-Set\-Joueur}}
+\index{jeu\-Set\-Joueur@{jeu\-Set\-Joueur}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Set\-Joueur}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Set\-Joueur (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a0f43a0fd6ddd2856e2d7ac1aeaf1f952}
+
+
+Mutateur du joueur. Procédure qui fait les allocations dynamiques et initialise un nombre nb de joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, nb un entier désignant le nombre de joueurs à initialiser (à créer) \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_a390202646d38d32c0556f54b8ba9b095}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Set\-Niveau@{jeu\-Set\-Niveau}}
+\index{jeu\-Set\-Niveau@{jeu\-Set\-Niveau}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Set\-Niveau}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-Set\-Niveau (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron, }
+\item[{int}]{id\-Niveau}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a390202646d38d32c0556f54b8ba9b095}
+
+
+Mutateur du niveau. Cette fonction initialise le niveau en fonction de l'identifiant id\-Niveau et en initialisant le terrain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}, id\-Niveau un entier identifiant le niveau. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_jeu_8h_a430b5c38e53d825913da318533ed3c7c}{\index{Jeu.\-h@{Jeu.\-h}!jeu\-Trouver\-Gagnant@{jeu\-Trouver\-Gagnant}}
+\index{jeu\-Trouver\-Gagnant@{jeu\-Trouver\-Gagnant}!Jeu.h@{Jeu.\-h}}
+\subsubsection[{jeu\-Trouver\-Gagnant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Joueur}$\ast$ jeu\-Trouver\-Gagnant (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu} $\ast$}]{Jeu\-Tron}
+\end{DoxyParamCaption}
+)}}\label{_jeu_8h_a430b5c38e53d825913da318533ed3c7c}
+
+
+Fonction qui détermine le gagnant d'une partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Jeu\-Tron} & un pointeur sur \hyperlink{struct_jeu}{Jeu}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur le joueur qui gagne la partie. 
+\end{DoxyReturn}
